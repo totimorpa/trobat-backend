@@ -1,2 +1,2 @@
 # trobat-backend
-Node.js Backend for <a herf="https://trobat.cat">trobat.cat</a>
+Node.js Backend for <a href="https://trobat.cat">trobat.cat</a>
