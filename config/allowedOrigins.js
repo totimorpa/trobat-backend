@@ -3,6 +3,7 @@ const allowedOrigins = [
   "https://www.trobat.cat",
   "https://trobat.cat",
   "http://localhost:3000",
+  "https://localhost:3000",
   "http://localhost:4040",
 ];
 

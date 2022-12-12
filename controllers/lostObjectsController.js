@@ -29,10 +29,29 @@ const getAllLostObjects = asyncHandler(async (req, res) => {
 // @route POST /lostObjects
 // @access Private
 const createNewLostObject = asyncHandler(async (req, res) => {
-  const { user, title, text, picture, dateFound } = req.body;
+  const {
+    user,
+    title,
+    text,
+    picture,
+    dateFound,
+    categories,
+    lloc,
+    telefon,
+    recollida,
+  } = req.body;
 
   // Confirm data
-  if (!user || !title || !text || !dateFound) {
+  if (
+    !user ||
+    !title ||
+    !text ||
+    !dateFound ||
+    !categories ||
+    !lloc ||
+    !telefon ||
+    !recollida
+  ) {
     return res.status(400).json({ message: "All fields are required" });
   }
 
@@ -50,6 +69,10 @@ const createNewLostObject = asyncHandler(async (req, res) => {
     text,
     picture,
     dateFound,
+    categories,
+    lloc,
+    telefon,
+    recollida,
   });
 
   if (lostObject) {
@@ -94,6 +117,10 @@ const updateLostObject = asyncHandler(async (req, res) => {
   lostObject.picture = picture;
   lostObject.dateFound = dateFound;
   lostObject.retreived = retreived;
+  lostObject.categories = categories;
+  lostObject.lloc = lloc;
+  lostObject.telefon = telefon;
+  lostObject.recollida = recollida;
 
   const updatedLostObject = await lostObject.save();
 
