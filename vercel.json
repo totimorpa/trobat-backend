@@ -1,7 +1,6 @@
 {
   "version": 2,
-  "name": "programming-languages-api",
+  "name": "music-album",
   "builds": [{ "src": "server.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "/server.js" }],
-  "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }]
+  "routes": [{ "src": "/(.*)", "dest": "/server.js" }]
 }
