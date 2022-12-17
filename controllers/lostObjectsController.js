@@ -89,7 +89,18 @@ const createNewLostObject = asyncHandler(async (req, res) => {
 // @route PATCH /lostObjects
 // @access Private
 const updateLostObject = asyncHandler(async (req, res) => {
-  const { id, user, title, text, picture, dateFound, retreived } = req.body;
+  const {
+    id,
+    user,
+    title,
+    text,
+    picture,
+    dateFound,
+    categories,
+    lloc,
+    telefon,
+    recollida,
+  } = req.body;
 
   // Confirm data
   if (!id || !user || !title) {
